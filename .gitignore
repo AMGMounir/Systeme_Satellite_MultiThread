@@ -1,5 +1,8 @@
-# Prerequisites
-*.d
+# Executables
+thermal_satellite
+thermal_satellite.exe
+*.out
+*.exe
 
 # Object files
 *.o
@@ -7,34 +10,16 @@
 *.obj
 *.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
+# Compiled Dynamic libraries
 *.so
-*.so.*
 *.dylib
+*.dll
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
 
 # Debug files
 *.dSYM/
@@ -42,14 +27,11 @@
 *.idb
 *.pdb
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# VSCode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
 
-# debug information files
-*.dwo
+# Build directories
+build/
+bin/
