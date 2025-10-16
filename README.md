@@ -278,7 +278,7 @@ uint64_t next_execution = timing_get_ms();
 const uint32_t PERIOD_MS = 1000;
 
 while (system_running) {
-    // Travail...
+    // instruc
     
     next_execution += PERIOD_MS;
     timing_wait_until(next_execution);  // Attente précise
@@ -311,7 +311,7 @@ static const float TEMP_RANGES[4][2] = {
 
 ---
 
-## 💾 Analyse mémoire
+## Analyse mémoire
 
 ### Empreinte mémoire totale : **~1.1 KB**
 ```
@@ -340,7 +340,7 @@ Total estimé : 1137 octets (~1.11 KB)
 
 ---
 
-## 🎬 Démo
+## Démo
 
 ### Sortie normale
 ```
@@ -471,11 +471,6 @@ Dans `include/types.h` :
 - **ECSS** (European Cooperation for Space Standardization)
 - **DO-178C** (Software Considerations in Airborne Systems)
 
-### Livres recommandés
-- *"Programming with POSIX Threads"* - David R. Butenhof
-- *"Embedded Systems Architecture"* - Daniele Lacamera
-- *"Real-Time Systems Design and Analysis"* - Phillip A. Laplante
-
 ---
 
 ## Évolutions futures
@@ -523,74 +518,5 @@ Fichiers         : 20
 Modules          : 10
 Threads          : 4
 Mémoire utilisée : 1.1 KB
-Temps développé  : 4 heures
+Temps développé  : 2-3 semaines
 ```
-
----
-
-## 📄 Fichiers supplémentaires à créer
-
-### 1. **LICENSE** (MIT)
-```
-MIT License
-
-Copyright (c) 2025 Mounir AMGHAR
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-### 2. **.gitignore**
-```
-# Executables
-thermal_satellite
-thermal_satellite.exe
-*.out
-*.exe
-
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# VSCode
-.vscode/*
-!.vscode/tasks.json
-!.vscode/c_cpp_properties.json
-
-# Build directories
-build/
-bin/
