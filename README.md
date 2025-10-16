@@ -128,7 +128,7 @@ make clean
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 ```
 thermal_satellite/
 ├── include/
@@ -502,7 +502,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 
 ---
 
-## 👤 Auteur
+## Auteur
 
 **Mounir AMGHAR**
 - Systèmes embarqués pour applications spatiales
