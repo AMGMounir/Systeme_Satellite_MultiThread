@@ -63,20 +63,6 @@ Ce projet simule un **système de contrôle thermique** pour satellite avec :
 
 ---
 
-
-### Flux de données
-```
-[Capteurs] ──┐
-             ├──> [Mutex] ──> [derniers_capteurs[]]
-             │                        │
-             └──> [Queue] ─────────> [Télémétrie]
-                     ▲
-                     │
-              [Contrôle thermique]
-```
-
----
-
 ## Installation
 
 ### Prérequis
@@ -128,38 +114,6 @@ make clean
 
 ---
 
-## Structure du projet
-```
-thermal_satellite/
-├── include/
-│   ├── config.h         # Manipulation de bits (registres)
-│   ├── historique.h     # Buffer circulaire
-│   ├── memory.h         # Analyse mémoire
-│   ├── queue.h          # Files de messages thread-safe
-│   ├── sensors.h        # Interface capteurs
-│   ├── telemetry.h      # Télémétrie
-│   ├── thermal.h        # Contrôle thermique + FSM
-│   ├── timing.h         # Timing précis
-│   ├── types.h          # Structures de données
-│   └── watchdog.h       # Watchdog timer
-│
-├── src/
-│   ├── config.c         # Gestion registre de configuration
-│   ├── historique.c     # Implémentation buffer circulaire
-│   ├── memory.c         # Calculs mémoire
-│   ├── queue.c          # Queues avec mutex intégrés
-│   ├── sensors.c        # Simulation capteurs
-│   ├── telemetry.c      # Traitement télémétrie
-│   ├── thermal.c        # Machine à états + contrôle
-│   ├── timing.c         # Fonctions de timing précis
-│   ├── watchdog.c       # Surveillance threads
-│   └── main.c           # Point d'entrée + orchestration
-│
-├── Makefile             # Compilation automatisée
-└── README.md            # Ce fichier
-```
-
----
 
 ## Concepts embarqués implémentés
 
@@ -462,10 +416,6 @@ Dans `include/types.h` :
 ---
 
 ## Ressources et références
-
-### Documentation POSIX Threads
-- [POSIX Threads Programming](https://computing.llnl.gov/tutorials/pthreads/)
-- [pthread.h man pages](https://man7.org/linux/man-pages/man7/pthreads.7.html)
 
 ### Standards spatiaux
 - **ECSS** (European Cooperation for Space Standardization)
